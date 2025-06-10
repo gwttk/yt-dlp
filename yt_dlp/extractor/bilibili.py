@@ -87,8 +87,10 @@ class BilibiliBaseIE(InfoExtractor):
             'format_id': str_or_none(audio.get('id')),
         } for audio in audios]
 
+        import sys
+        # print(traverse_obj(traverse_obj(play_info, ('dash', 'video', ...))[0], ('backupUrl', 0), 'backup_url', 'baseUrl', 'base_url', 'url'), file=sys.stderr)
         formats.extend({
-            'url': traverse_obj(video, 'baseUrl', 'base_url', 'url'),
+            'url': traverse_obj(video, ('backupUrl', 0), ('backup_url', 0), 'baseUrl', 'base_url', 'url'),
             'ext': mimetype2ext(traverse_obj(video, 'mimeType', 'mime_type')),
             'fps': float_or_none(traverse_obj(video, 'frameRate', 'frame_rate')),
             'width': int_or_none(video.get('width')),
