@@ -37,6 +37,8 @@ from ..globals import plugin_pps, postprocessors
 from ..plugins import PACKAGE_NAME, register_plugin_spec, PluginSpec
 from ..utils import deprecation_warning
 
+import yt_dlp_plugins.postprocessor
+
 
 def __getattr__(name):
     lookup = plugin_pps.value
