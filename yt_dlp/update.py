@@ -168,7 +168,8 @@ def _get_system_deprecation():
             return EXE_MSG_TMPL.format('system glibc version < 2.35', 'issues/13858', STOP_MSG)
         return None
 
-    return f'Support for Python version {major}.{minor} has been deprecated. {PYTHON_MSG}'
+    # return f'Support for Python version {major}.{minor} has been deprecated. {PYTHON_MSG}'
+    return None
 
 
 def _sha256_file(path):
