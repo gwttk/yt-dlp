@@ -188,7 +188,8 @@ def _get_system_deprecation():
                 'You may stop receiving updates on this version at any time!')
         return None
 
-    return f'Support for Python version {major}.{minor} has been deprecated. {PYTHON_MSG}'
+    # return f'Support for Python version {major}.{minor} has been deprecated. {PYTHON_MSG}'
+    return None
 
 
 def _get_outdated_warning():
