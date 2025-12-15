@@ -193,7 +193,7 @@ def _get_outdated_warning():
                 f'{is_non_updateable() or """Run "yt-dlp --update" or "yt-dlp -U" to update"""}.',
                 'To suppress this warning, add --no-update to your command/config.')))
     return None
-    
+
 
 def _sha256_file(path):
     h = hashlib.sha256()
